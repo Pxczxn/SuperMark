@@ -1,0 +1,55 @@
+# ============================================================
+# Pxczxn Git Guard
+# 插图路径（提交）：**/public/images/**、**/public/brand/**、
+#                   **/src/assets/**、**/static/**
+# 原型路径（忽略）：prototype-assets/、.prototype-review/、
+#                   prototype-specs/、mockup/、wireframe/、figma/、design/
+# ============================================================
+
+# ---- 构建产物 ----
+target/
+dist/
+node_modules/
+build/
+out/
+
+# ---- 运行时数据 / 本地环境 ----
+# H2 数据库文件（backend/data/、data/）为运行时产物，不入库
+*.mv.db
+*.trace.db
+data/
+backend/data/
+logs/
+uploads/
+.env
+.env.*
+!.env.example
+
+# ---- IDE / AI / 本地工具 ----
+.idea/
+.vscode/
+.codex/
+.cursor/
+.agents/
+*.iml
+.run/
+
+# ---- 开发资料 ----
+docs/
+*.md
+!/README.md
+qa/
+tools/
+
+# ---- E2E 开发现场（截图、证据、临时脚本、归档）----
+e2e/
+
+# ---- 杂项 ----
+*.7z
+*.log
+Thumbs.db
+.DS_Store
+
+# ---- 依赖锁文件：Node 生态保留 lockfile 保证可复现构建 ----
+# （package-lock.json / pnpm-lock.yaml 不忽略）
+.buildgen/
